@@ -21,7 +21,7 @@ START get_item
         IF requested_item is the item in current_room
             ADD requested_item TO inventory
             OUTPUT "You picked up the ", requested_item, "."
-            OUTPUT requested_item + " has been added to your inventory."
+            OUTPUT requested_item, " has been added to your inventory."
         ELSE
             OUTPUT "There is no ", requested_item, " in this room."
         END IF
