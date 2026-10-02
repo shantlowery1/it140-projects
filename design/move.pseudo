@@ -7,19 +7,110 @@
 # Write pseudocode, not Python code. Use clear indentation and course-appropriate
 # keywords such as INPUT, OUTPUT, IF, ELSE, WHILE, SET, or similar terms.
 
-# TODO 1: Identify the information the movement process needs.
-# Consider the player's current room and movement command.
+# The process needs the player's current room and the direction
+# the player wants to move.
 
-# TODO 2: Prompt for and receive the player's movement command.
+# Project One Move-Between-Rooms Pseudocode
 
-# TODO 3: Validate whether the requested movement is possible from the
-# current room. Show the decision clearly.
+SET current_room = "Reception"
+SET movement_command = ""
+SET game_over = FALSE
 
-# TODO 4: Describe what happens when the movement command is valid.
-# Include the room update and player output.
+WHILE game_over == FALSE
 
-# TODO 5: Describe what happens when the movement command is invalid.
-# Include the output the player should receive.
+    SET move_valid = FALSE
 
-# TODO 6: Show how movement fits into repeated gameplay.
-# The final game continues accepting commands until a required ending occurs.
+    OUTPUT "Enter a direction: north, south, east, or west."
+    INPUT movement_command
+
+    IF current_room == "Reception"
+
+        IF movement_command == "east"
+            SET current_room = "Patient Room"
+            SET move_valid = TRUE
+        ELSE IF movement_command == "north"
+            SET current_room = "Warden's Office"
+            SET move_valid = TRUE
+        END IF
+
+    ELSE IF current_room == "Patient Room"
+
+        IF movement_command == "west"
+            SET current_room = "Reception"
+            SET move_valid = TRUE
+        ELSE IF movement_command == "north"
+            SET current_room = "Nurses' Station"
+            SET move_valid = TRUE
+        END IF
+
+    ELSE IF current_room == "Nurses' Station"
+
+        IF movement_command == "south"
+            SET current_room = "Patient Room"
+            SET move_valid = TRUE
+        ELSE IF movement_command == "north"
+            SET current_room = "Treatment Room"
+            SET move_valid = TRUE
+        END IF
+
+    ELSE IF current_room == "Treatment Room"
+
+        IF movement_command == "south"
+            SET current_room = "Nurses' Station"
+            SET move_valid = TRUE
+        ELSE IF movement_command == "east"
+            SET current_room = "Cafeteria"
+            SET move_valid = TRUE
+        END IF
+
+    ELSE IF current_room == "Cafeteria"
+
+        IF movement_command == "west"
+            SET current_room = "Treatment Room"
+            SET move_valid = TRUE
+        ELSE IF movement_command == "east"
+            SET current_room = "Basement"
+            SET move_valid = TRUE
+        END IF
+
+    ELSE IF current_room == "Basement"
+
+        IF movement_command == "west"
+            SET current_room = "Cafeteria"
+            SET move_valid = TRUE
+        ELSE IF movement_command == "south"
+            SET current_room = "Security Office"
+            SET move_valid = TRUE
+        END IF
+
+    ELSE IF current_room == "Security Office"
+
+        IF movement_command == "north"
+            SET current_room = "Basement"
+            SET move_valid = TRUE
+        ELSE IF movement_command == "west"
+            SET current_room = "Warden's Office"
+            SET move_valid = TRUE
+        END IF
+
+    END IF
+
+    IF move_valid == TRUE
+        OUTPUT "You moved to " + current_room
+    ELSE
+        OUTPUT "You cannot move in that direction."
+    END IF
+
+    IF current_room == "Warden's Office"
+        OUTPUT "You hear heavy footsteps behind you.."
+        OUTPUT "Warden Graves has caught you!"
+        OUTPUT "GAME OVER"
+        SET game_over = TRUE
+
+    ELSE IF current_room == "Reception" AND player has all six items
+        OUTPUT "You use the Exit Key to escape the asylum."
+        OUTPUT "YOU WIN!"
+        SET game_over = TRUE
+    END IF
+
+END WHILE
