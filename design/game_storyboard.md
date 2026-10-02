@@ -7,46 +7,43 @@
 
 **Theme:**
 
-TODO: Name and briefly describe your game's theme.
+The theme of my game is a spooky, dark and abandoned insane asylum.
 
 **Storyline:**
 
-TODO: In one short paragraph, explain the setting, the player's goal, the items
-the player must gather, and the threat created by the villain.
+The player wakes up trapped inside an old, abandoned asylum and must find a way to escape. The player has to explore the asylum and collect all six items: an old key, security badge, patient diary, flashlight, crowbar, and exit key. The Warden will be the villain and can be found in the Warden's Office, so the player has to avoid that room while collecting all six items. Throughout the asylum, the player will start to hear strange, creepy noises that make it seem like the Warden is somewhere nearby. After collecting all six items, the player has to remember their way back to the entrance, or starting room, and use the exit key to escape the asylum before encountering the Warden.
 
 ## Rooms
 
 Project One requires a minimum of eight rooms.
 
-1. TODO: Start room
-2. TODO: Room
-3. TODO: Room
-4. TODO: Room
-5. TODO: Room
-6. TODO: Room
-7. TODO: Room
-8. TODO: Villain room
-
-Add more rooms if your design needs them.
+1. Reception Room (Start)
+2. Patient Room
+3. Nurses' Station
+4. Treatment Room
+5. Cafeteria
+6. Basement
+7. Security Office
+8. Warden's Office (Villain room)
 
 ## Items
 
 With the minimum eight-room design, Project One requires at least six items.
 Every room except the start room and villain room must contain one item.
 
-1. TODO: Item
-2. TODO: Item
-3. TODO: Item
-4. TODO: Item
-5. TODO: Item
-6. TODO: Item
+1. Patient Room: Old Key
+2. Nurses' Station: Security Badge
+3. Treatment Room: Patient Diary
+4. Cafeteria: Flashlight
+5. Basement: Crowbar
+6. Security Office: Exit Key
 
 If you add rooms beyond the minimum, add an item for every additional room
 except the start room and villain room.
 
 ## Villain
 
-TODO: Identify and briefly describe the villain.
+The Warden is the former head of the abandoned asylum who never left after the building was closed. He now remains inside his office and watches over the asylum as if he still controls it. The player will hear strange footsteps, doors closing, and other creepy noises throughout the asylum, making it seem like the Warden is nearby. The player has to avoid the Warden's Office until all six items have been collected. If the player enters the Warden's Office too early, the Warden catches them and the game ends.
 
 ## Storyboard and Map Check
 
