@@ -149,6 +149,13 @@ def main():
                     current_room = next_room
                     print("You moved to " + current_room)
 
+                    # Creepy message when trying to escape with all 6 items.
+                    if current_room == "Cafeteria" and len(inventory) == 6:
+                        print("\nSuddenly, the sound of keys jingling echoes behind you. Closer.")
+                        print("Heavy footsteps become louder.")
+                        print("A low voice whispers, 'You can't leave...'")
+                        print("You can feel Warden Graves is close. You need to hurry!")
+
                     # Creepy messages when a player enters a room for the first time.
                     if current_room not in visited_rooms:
                         if current_room == "Nurses' Station":
